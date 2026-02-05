@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Programs | ABC Fitness Studio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>ABC Fitness Studio</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Programs</a>
+    <a href="about.html">About</a>
+    <a href="custom.html">Custom Training</a>
+  </nav>
+</header>
+
+<main>
+  <h2>Our Training Programs</h2>
+  <p>Explore our fitness programs and add sessions to your cart.</p>
+
+  <div style="margin: 12px 0;">
+    <button id="viewCartBtn">View Cart</button>
+  </div>
+
+  <section class="grid" id="programGrid">
+
+    <div class="card">
+      <h3>HIIT Session</h3>
+      <p>High intensity interval training (45 min).</p>
+      <p><strong>$15</strong></p>
+      <button class="addBtn" data-id="hiit" data-name="HIIT Session" data-price="15">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <h3>Strength Training</h3>
+      <p>Full-body strength session (60 min).</p>
+      <p><strong>$18</strong></p>
+      <button class="addBtn" data-id="strength" data-name="Strength Training" data-price="18">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <h3>Yoga Flow</h3>
+      <p>Flexibility + balance session (60 min).</p>
+      <p><strong>$12</strong></p>
+      <button class="addBtn" data-id="yoga" data-name="Yoga Flow" data-price="12">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <h3>Pilates Core</h3>
+      <p>Core strength and posture (50 min).</p>
+      <p><strong>$14</strong></p>
+      <button class="addBtn" data-id="pilates" data-name="Pilates Core" data-price="14">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <h3>Spin Class</h3>
+      <p>Indoor cycling endurance (45 min).</p>
+      <p><strong>$13</strong></p>
+      <button class="addBtn" data-id="spin" data-name="Spin Class" data-price="13">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <h3>Boxing Conditioning</h3>
+      <p>Cardio + technique (45 min).</p>
+      <p><strong>$16</strong></p>
+      <button class="addBtn" data-id="boxing" data-name="Boxing Conditioning" data-price="16">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <h3>Personal Training</h3>
+      <p>1-on-1 coaching session (60 min).</p>
+      <p><strong>$40</strong></p>
+      <button class="addBtn" data-id="pt" data-name="Personal Training" data-price="40">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <h3>Nutrition Consult</h3>
+      <p>Diet and lifestyle consultation (30 min).</p>
+      <p><strong>$25</strong></p>
+      <button class="addBtn" data-id="nutrition" data-name="Nutrition Consult" data-price="25">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <h3>Monthly Membership</h3>
+      <p>Unlimited classes for 30 days.</p>
+      <p><strong>$99</strong></p>
+      <button class="addBtn" data-id="membership" data-name="Monthly Membership" data-price="99">Add to Cart</button>
+    </div>
+
+  </section>
+
+  <!-- CART MODAL -->
+  <div class="modal" id="cartModal" aria-hidden="true">
+    <div class="modalContent" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <div class="modalHeader">
+        <h3 id="cartTitle">Shopping Cart</h3>
+        <button id="closeCartBtn" aria-label="Close cart">X</button>
+      </div>
+
+      <div id="cartItems"></div>
+
+      <div class="modalActions">
+        <button id="clearCartBtn">Clear Cart</button>
+        <button id="processOrderBtn">Process Order</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <label for="subscribeEmail">Newsletter:</label>
+  <input type="email" id="subscribeEmail" placeholder="Enter your email">
+  <button id="subscribeBtn">Subscribe</button>
+  <p id="subscribeError" style="color:red;"></p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

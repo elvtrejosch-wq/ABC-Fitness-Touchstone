@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Custom Training | ABC Fitness Studio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>ABC Fitness Studio</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Programs</a>
+    <a href="about.html">About</a>
+    <a href="custom.html">Custom Training</a>
+  </nav>
+</header>
+
+<main>
+  <h2>Custom Training Plans</h2>
+  <p>Request a personalized fitness plan based on your goals.</p>
+
+  <section>
+    <h2>Custom Training Plan Request</h2>
+    <p>
+      Tell us your goals and preferences. We will review your request and contact you with a personalized plan.
+    </p>
+  </section>
+
+  <form id="customForm" novalidate>
+    <div class="formRow">
+      <label for="goal">Primary Goal</label>
+      <select id="goal">
+        <option value="">-- Select a goal --</option>
+        <option value="fat_loss">Fat loss</option>
+        <option value="muscle_gain">Muscle gain</option>
+        <option value="endurance">Endurance</option>
+        <option value="mobility">Mobility/Flexibility</option>
+        <option value="general_health">General health</option>
+      </select>
+      <small class="error" id="goalError"></small>
+    </div>
+
+    <div class="formRow">
+      <label>Current Fitness Level</label>
+      <label><input type="radio" name="level" value="beginner"> Beginner</label><br>
+      <label><input type="radio" name="level" value="intermediate"> Intermediate</label><br>
+      <label><input type="radio" name="level" value="advanced"> Advanced</label>
+      <small class="error" id="levelError"></small>
+    </div>
+
+    <div class="formRow">
+      <label for="days">Days per week you can train</label>
+      <input type="number" id="days" min="1" max="7" placeholder="e.g., 3">
+      <small class="error" id="daysError"></small>
+    </div>
+
+    <div class="formRow">
+      <label>Preferred Training Style (choose all that apply)</label>
+      <label><input type="checkbox" id="style_strength" value="strength"> Strength</label><br>
+      <label><input type="checkbox" id="style_hiit" value="hiit"> HIIT</label><br>
+      <label><input type="checkbox" id="style_yoga" value="yoga"> Yoga</label><br>
+      <label><input type="checkbox" id="style_cardio" value="cardio"> Cardio</label>
+    </div>
+
+    <div class="formRow">
+      <label for="limitations">Injuries / Limitations (optional)</label>
+      <textarea id="limitations" rows="3" placeholder="e.g., knee pain, back injury"></textarea>
+    </div>
+
+    <div class="formRow">
+      <label for="notes">Additional Notes (required)</label>
+      <textarea id="notes" rows="4" placeholder="Tell us what you want to achieve and any preferences."></textarea>
+      <small class="error" id="notesError"></small>
+    </div>
+
+    <div class="formActions">
+      <button type="submit" id="submitCustomBtn">Submit Request</button>
+      <button type="button" id="clearCustomBtn">Clear Form</button>
+    </div>
+
+    <p style="margin-top: 10px; font-size: 14px;">
+      <strong>Note:</strong> This form auto-saves your draft in this browser session.
+    </p>
+  </form>
+</main>
+
+<footer>
+  <label for="subscribeEmail">Newsletter:</label>
+  <input type="email" id="subscribeEmail" placeholder="Enter your email">
+  <button id="subscribeBtn">Subscribe</button>
+  <p id="subscribeError" style="color:red;"></p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

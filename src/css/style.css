@@ -1,0 +1,180 @@
+/* Base */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* Header */
+header {
+  padding: 16px 24px;
+  background: #0b1f3a;   /* dark blue */
+  color: white;
+}
+
+header h1 { margin: 0 0 8px 0; }
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 12px;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* Main */
+main {
+  padding: 24px;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding: 16px 24px;
+  background: #f2f2f2;
+  border-top: 1px solid #ddd;
+}
+
+footer input {
+  padding: 8px;
+  width: 240px;
+  max-width: 80%;
+}
+
+footer button {
+  padding: 8px 12px;
+  margin-left: 6px;
+  cursor: pointer;
+}/* Gallery grid + cards */
+ .grid {
+   display: grid;
+   grid-template-columns: repeat(3, minmax(0, 1fr));
+   gap: 16px;
+   margin-top: 12px;
+ }
+
+ .card {
+   border: 1px solid #ddd;
+   border-radius: 10px;
+   padding: 14px;
+   background: #fff;
+ }
+
+ .card h3 { margin-top: 0; }
+
+ .card button {
+   padding: 8px 12px;
+   cursor: pointer;
+ }
+
+ .card button:hover {
+   opacity: 0.9;
+ }
+
+ /* Modal */
+ .modal {
+   display: none;              /* hidden by default */
+   position: fixed;
+   inset: 0;
+   background: rgba(0,0,0,0.5);
+   padding: 24px;
+ }
+
+ .modalContent {
+   background: #fff;
+   max-width: 600px;
+   margin: 60px auto;
+   border-radius: 12px;
+   padding: 16px;
+ }
+
+ .modalHeader {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+
+ #cartItems p {
+   margin: 8px 0;
+   padding: 8px;
+   border-bottom: 1px solid #eee;
+ }
+
+ .modalActions {
+   display: flex;
+   gap: 10px;
+   margin-top: 12px;
+ }
+
+ @media (max-width: 900px) {
+   .grid { grid-template-columns: repeat(2, 1fr); }
+ }
+
+ @media (max-width: 600px) {
+   .grid { grid-template-columns: 1fr; }
+ }/* About page table */
+  .hoursTable {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+
+  .hoursTable th, .hoursTable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+
+  .hoursTable th {
+    background: #0b1f3a;
+    color: white;
+  }
+
+  /* Forms */
+  .formRow {
+    margin: 12px 0;
+    max-width: 600px;
+  }
+
+  .formRow label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  .formRow input, .formRow textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+
+  .formActions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .formActions button {
+    padding: 10px 14px;
+    cursor: pointer;
+  }
+
+  .error {
+    display: block;
+    color: red;
+    margin-top: 6px;
+    min-height: 18px;
+  }select {
+     width: 100%;
+     padding: 10px;
+     border: 1px solid #ccc;
+     border-radius: 8px;
+     background: white;
+   }
